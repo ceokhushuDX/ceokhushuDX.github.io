@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khushu — Portfolio</title>
+  <title>Khushwant— Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 
   <!-- Fonts -->
@@ -23,7 +23,7 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">KHUSHU<span>.</span></div>
+    <div class="logo">KHUSHWANT YADAV<span>.</span></div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -36,7 +36,7 @@
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Hello, I'm <span>Khushu</span></h1>
+      <h1>Hello, I'm <span>Khushwant Yadav</span></h1>
       <p>Aspiring Developer • Future Tech Founder</p>
       <button class="btn">View My Work</button>
     </div>
@@ -100,23 +100,33 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
+  <<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="section-title">Contact</h2>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message..." required></textarea>
-      <button class="btn">Send</button>
-    </form>
-  </section>
+  <form 
+    action="https://formsubmit.co/ceokhushu@gmail.com" 
+    method="POST"
+    class="contact-form"
+  >
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
 
-  <footer class="footer">
-    © 2025 Khushu — All Rights Reserved
-  </footer>
+    <!-- Redirect after success -->
+    <input type="hidden" name="_next" value="https://ceokhushuDX.github.io/success.html">
 
-  <script src="script.js"></script>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Message..." required></textarea>
 
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer class="footer">
+  © 2025 Khushu — All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
 </body>
-  </html>
+</html>
