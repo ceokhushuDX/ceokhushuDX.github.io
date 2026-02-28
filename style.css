@@ -367,3 +367,16 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* fade-in effect for hero button */
+.hero-btn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInBtn 1s forwards 0.5s; /* delay 0.5s */
+}
+
+@keyframes fadeInBtn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    }
