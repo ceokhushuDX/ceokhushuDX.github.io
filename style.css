@@ -284,3 +284,22 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 0 20px rgba(123, 47, 247, 0.6);
                                 }
+/* make navbar scrollable on small screens */
+.navbar-scroll {
+  overflow-x: auto;      /* enable horizontal scroll */
+  white-space: nowrap;   /* keep items in one line */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+}
+
+/* optional: style for ul and li */
+.navbar-scroll ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar-scroll li {
+  display: inline-block;
+  margin-right: 20px; /* spacing between nav items */
+  }
