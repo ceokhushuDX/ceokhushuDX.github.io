@@ -361,3 +361,9 @@ body {
   background: #b36ddb;  /* lighter purple on hover */
   transform: translateY(-2px);
   }
+/* ensure the button is visible in hero */
+.hero-btn {
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
