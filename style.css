@@ -151,7 +151,7 @@ body {
 /* 🔥 small icon (your trophy, yt, goal) */
 .project-card img.project-icon {
   width: 20px;
-  height: 20px;
+  height: 30px;
   object-fit: contain;
   margin-bottom: 15px;
 }
