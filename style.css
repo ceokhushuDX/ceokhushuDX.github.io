@@ -334,3 +334,12 @@ body {
 .navbar-scroll li a:hover {
   color: #9b59b6; /* matches your purple vibe */
 }
+/* Make all navbar links white by default */
+.navbar-scroll li a {
+  color: #fff !important; /* force white */
+}
+
+/* hover stays purple */
+.navbar-scroll li a:hover {
+  color: #9b59b6;
+  }
