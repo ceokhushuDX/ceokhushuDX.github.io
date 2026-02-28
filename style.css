@@ -343,3 +343,21 @@ body {
 .navbar-scroll li a:hover {
   color: #9b59b6;
   }
+/* HERO BUTTON */
+.hero-btn {
+  display: inline-block;
+  background: #9b59b6;       /* your purple vibe */
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+/* hover effect */
+.hero-btn:hover {
+  background: #b36ddb;  /* lighter purple on hover */
+  transform: translateY(-2px);
+  }
