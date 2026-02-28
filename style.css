@@ -380,3 +380,22 @@ body {
     transform: translateY(0);
   }
     }
+/* HERO BUTTON - purple theme */
+.hero-btn {
+  display: inline-block;
+  background-color: #9b59b6;   /* your purple vibe */
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  opacity: 1 !important;       /* ensure it’s visible */
+  visibility: visible !important;
+}
+
+/* hover effect */
+.hero-btn:hover {
+  background-color: #b36ddb;   /* slightly lighter purple */
+  transform: translateY(-2px);
+}
