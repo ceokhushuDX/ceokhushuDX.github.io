@@ -284,14 +284,33 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 0 20px rgba(123, 47, 247, 0.6);
                                 }
-/* make navbar scrollable on small screens */
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #161616;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* logo styling */
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* scrollable nav items */
 .navbar-scroll {
-  overflow-x: auto;      /* enable horizontal scroll */
-  white-space: nowrap;   /* keep items in one line */
+  overflow-x: auto;           /* horizontal scroll */
+  white-space: nowrap;        /* keep items in one line */
   -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
 }
 
-/* optional: style for ul and li */
+/* remove list default styles */
 .navbar-scroll ul {
   display: flex;
   padding: 0;
@@ -299,7 +318,19 @@ body {
   list-style: none;
 }
 
+/* spacing and hover for nav items */
 .navbar-scroll li {
   display: inline-block;
-  margin-right: 20px; /* spacing between nav items */
-  }
+  margin-right: 25px;
+}
+
+.navbar-scroll li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-scroll li a:hover {
+  color: #9b59b6; /* matches your purple vibe */
+}
