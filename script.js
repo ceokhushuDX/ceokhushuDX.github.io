@@ -45,27 +45,23 @@ gsap.utils.toArray(".section").forEach((section) => {
   });
 });
 
-/* INSTAGRAM POPUP */
-document.addEventListener("DOMContentLoaded", () => {
+// === IG POPUP LOGIC ===
 
-  // Show popup after 2 seconds
-  setTimeout(() => {
-    document.getElementById("insta-popup").classList.add("active");
-  }, 2000);
+// Wait 3 seconds then show popup
+setTimeout(() => {
+  const popup = document.getElementById("insta-popup");
+  popup.classList.add("active");
+}, 3000);
 
-  // Follow button → Show "Thanks" message
-  document.getElementById("follow-btn").addEventListener("click", () => {
-    document.getElementById("popup-content").style.display = "none";
-    document.getElementById("popup-thanks").style.display = "block";
+// Close buttons
+document.querySelectorAll(".popup-close").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.getElementById("insta-popup").classList.remove("active");
   });
+});
 
-  // Close popup
-  document.querySelectorAll(".popup-close").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.getElementById("insta-popup").classList.remove("active");
-    });
-  });
-
-});    });
-  });
-</script>
+// When user clicks FOLLOW
+document.getElementById("follow-btn").addEventListener("click", () => {
+  document.getElementById("popup-content").style.display = "none";
+  document.getElementById("popup-thanks").style.display = "block";
+});
