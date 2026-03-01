@@ -422,51 +422,94 @@ body {
   pointer-events: auto;
 }
 
-/* Popup box */
+/* === IG POPUP OVERLAY === */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* === POPUP BOX === */
 .popup-box {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
   width: 320px;
-  color: #fff;
-  animation: popupSlide 0.35s ease;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  text-align: center;
+  transform: translateY(20px);
+  transition: 0.3s ease;
 }
 
-@keyframes popupSlide {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.popup-overlay.active .popup-box {
+  transform: translateY(0);
 }
 
+/* === ICON === */
 .popup-icon {
-  width: 65px;
-  margin-bottom: 15px;
+  width: 70px;
+  margin-bottom: 10px;
 }
 
+/* === TEXT === */
+#popup-content h3,
+#popup-thanks h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.username {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* === BUTTON === */
 .popup-btn {
-  display: block;
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0;
   background: #ff0069;
-  padding: 10px 20px;
-  border-radius: 10px;
   color: white;
-  font-weight: 600;
-  margin: 15px auto;
-  width: fit-content;
   text-decoration: none;
-  transition: 0.2s;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  margin-bottom: 12px;
 }
 
 .popup-btn:hover {
-  background: #ff2f87;
+  background: #e2005f;
 }
 
+/* === CLOSE BUTTON === */
 .popup-close {
-  background: transparent;
-  border: 1px solid #fff;
-  padding: 8px 16px;
+  width: 100%;
+  padding: 10px 0;
+  background: #dddddd;
+  border: none;
+  font-weight: 600;
   border-radius: 8px;
-  color: #fff;
-  margin-top: 10px;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.popup-close:hover {
+  background: #c8c8c8;
 }
