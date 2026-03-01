@@ -561,7 +561,11 @@ body {
 /* Username */
 #popup-content p {
   font-size: 14px;
-/* === IG POPUP OVERLAY (Glass Black) === */
+/* ============================
+   PREMIUM INSTAGRAM POPUP (FINAL)
+   ============================ */
+
+/* OVERLAY */
 #insta-popup {
   position: fixed;
   inset: 0;
@@ -580,8 +584,9 @@ body {
   opacity: 1;
 }
 
-/* === POPUP BOX (Black Glassmorphism) === */
+/* POPUP CONTAINER */
 .popup-box {
+  position: relative;
   width: 330px;
   padding: 32px 26px;
   background: rgba(20, 20, 20, 0.55);
@@ -590,13 +595,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 60px rgba(255, 0, 140, 0.25);
   text-align: center;
-
   transform: translateY(20px) scale(0.9);
   opacity: 0;
   animation: popupSlide 0.4s ease-out forwards;
 }
 
-/* Smooth entrance */
+/* ENTRANCE ANIMATION */
 @keyframes popupSlide {
   to {
     transform: translateY(0) scale(1);
@@ -604,7 +608,7 @@ body {
   }
 }
 
-/* === CLOSE (X) BUTTON — top right === */
+/* CLOSE (X) BUTTON */
 .popup-close-x {
   position: absolute;
   top: 14px;
@@ -624,7 +628,7 @@ body {
   background: rgba(255,255,255,0.2);
 }
 
-/* === INSTAGRAM ICON with Neon Glow === */
+/* INSTAGRAM ICON WITH NEON GLOW */
 .popup-icon {
   width: 85px;
   margin-bottom: 18px;
@@ -634,7 +638,7 @@ body {
           drop-shadow(0px 0px 40px #ff007c);
 }
 
-/* Titles */
+/* HEADINGS */
 #popup-content h3,
 #popup-thanks h3 {
   font-size: 22px;
@@ -643,6 +647,47 @@ body {
   margin-bottom: 8px;
 }
 
+#popup-content p {
+  font-size: 15px;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+}
+
+/* FOLLOW BUTTON */
+.popup-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ff007c, #ff54a8);
+  padding: 12px 0;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 14px;
+  transition: 0.25s ease;
+}
+
+.popup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 0, 124, 0.6);
+}
+
+/* BOTTOM CLOSE BUTTON */
+.popup-close {
+  width: 100%;
+  padding: 11px 0;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #eee;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.popup-close:hover {
+  background: rgba(255,255,255,0.15);
+}
 /* Username text */
 #popup-content p {
   font-size: 15px;
