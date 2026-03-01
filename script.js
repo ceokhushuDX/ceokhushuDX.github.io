@@ -45,23 +45,4 @@ gsap.utils.toArray(".section").forEach((section) => {
   });
 });
 
-// === IG POPUP LOGIC ===
 
-// Wait 3 seconds then show popup
-setTimeout(() => {
-  const popup = document.getElementById("insta-popup");
-  popup.classList.add("active");
-}, 3000);
-
-// Close buttons
-document.querySelectorAll(".popup-close").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.getElementById("insta-popup").classList.remove("active");
-  });
-});
-
-// When user clicks FOLLOW
-document.getElementById("follow-btn").addEventListener("click", () => {
-  document.getElementById("popup-content").style.display = "none";
-  document.getElementById("popup-thanks").style.display = "block";
-});
