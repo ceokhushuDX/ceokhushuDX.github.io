@@ -399,3 +399,64 @@ body {
   background-color: #b36ddb;   /* slightly lighter purple */
   transform: translateY(-2px);
 }
+/* INSTAGRAM POPUP */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.popup-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-box {
+  background: #111;
+  padding: 25px;
+  width: 85%;
+  max-width: 350px;
+  border-radius: 18px;
+  text-align: center;
+  animation: popupFade 0.4s ease;
+}
+
+@keyframes popupFade {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.popup-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.popup-btn {
+  display: block;
+  width: 100%;
+  background: #8a2be2; /* Purple theme */
+  color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.popup-close {
+  background: transparent;
+  border: 1px solid #333;
+  color: #ccc;
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 10px;
+}
