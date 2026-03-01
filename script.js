@@ -44,15 +44,22 @@ gsap.utils.toArray(".section").forEach((section) => {
     duration: 1,
   });
 });
-// Instagram Popup
-window.addEventListener("load", () => {
-  // show popup after 2 seconds
+<script>
+  // Show popup after 2 seconds
   setTimeout(() => {
-    document.getElementById("insta-popup").classList.add("show");
-  }, 1200);
-});
+    document.getElementById("insta-popup").classList.add("active");
+  }, 2000);
 
-// close popup
-document.querySelector(".popup-close").addEventListener("click", () => {
-  document.getElementById("insta-popup").classList.remove("show");
-});
+  // Follow button → Show "Thanks" message
+  document.getElementById("follow-btn").addEventListener("click", () => {
+    document.getElementById("popup-content").style.display = "none";
+    document.getElementById("popup-thanks").style.display = "block";
+  });
+
+  // Close popup
+  document.querySelectorAll(".popup-close").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.getElementById("insta-popup").classList.remove("active");
+    });
+  });
+</script>
