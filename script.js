@@ -44,3 +44,15 @@ gsap.utils.toArray(".section").forEach((section) => {
     duration: 1,
   });
 });
+// Instagram Popup
+window.addEventListener("load", () => {
+  // show popup after 2 seconds
+  setTimeout(() => {
+    document.getElementById("insta-popup").classList.add("show");
+  }, 1200);
+});
+
+// close popup
+document.querySelector(".popup-close").addEventListener("click", () => {
+  document.getElementById("insta-popup").classList.remove("show");
+});
