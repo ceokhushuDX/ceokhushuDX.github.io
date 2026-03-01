@@ -44,7 +44,10 @@ gsap.utils.toArray(".section").forEach((section) => {
     duration: 1,
   });
 });
-<script>
+
+/* INSTAGRAM POPUP */
+document.addEventListener("DOMContentLoaded", () => {
+
   // Show popup after 2 seconds
   setTimeout(() => {
     document.getElementById("insta-popup").classList.add("active");
@@ -61,5 +64,8 @@ gsap.utils.toArray(".section").forEach((section) => {
     btn.addEventListener("click", () => {
       document.getElementById("insta-popup").classList.remove("active");
     });
+  });
+
+});    });
   });
 </script>
